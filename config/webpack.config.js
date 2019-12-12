@@ -145,7 +145,7 @@ module.exports = function(webpackEnv) {
     return loaders;
   };
 
-  return {
+  let config = {
     mode: isEnvProduction ? 'production' : isEnvDevelopment && 'development',
     // Stop compilation early in production
     bail: isEnvProduction,
@@ -597,4 +597,10 @@ module.exports = function(webpackEnv) {
     },
     performance: false,
   };
+
+  let localConfigFile = path.join(process.cwd(), '.config.js')
+  let localConfig = require(localConfigFile)
+  localConfig.config(config)
+
+  return config
 };

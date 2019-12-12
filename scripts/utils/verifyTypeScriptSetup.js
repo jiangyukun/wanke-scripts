@@ -253,12 +253,12 @@ function verifyTypeScriptSetup() {
   }
 
   // Reference `react-scripts` types
-  if (!fs.existsSync(paths.appTypeDeclarations)) {
-    fs.writeFileSync(
-      paths.appTypeDeclarations,
-      `/// <reference types="react-scripts" />${os.EOL}`
-    );
-  }
+  // if (!fs.existsSync(paths.appTypeDeclarations)) {
+  //   fs.writeFileSync(
+  //     paths.appTypeDeclarations,
+  //     `/// <reference types="wanke-scripts" />${os.EOL}`
+  //   );
+  // }
 }
 
 module.exports = verifyTypeScriptSetup;

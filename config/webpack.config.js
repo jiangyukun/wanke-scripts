@@ -383,9 +383,6 @@ module.exports = function (webpackEnv) {
                                                 },
                                             },
                                         }
-                                    ],
-                                    [
-                                        require.resolve('babel-plugin-transform-decorators-legacy'),
                                     ]
                                 ],
 
@@ -416,7 +413,6 @@ module.exports = function (webpackEnv) {
                                         : isEnvDevelopment && 'development',
                                     [
                                         'babel-plugin-named-asset-import',
-                                        'babel-plugin-transform-decorators-legacy',
                                         'babel-preset-react-app',
                                         'react-dev-utils',
                                         'wanke-scripts',

@@ -382,9 +382,11 @@ module.exports = function (webpackEnv) {
                                                         '@svgr/webpack?-svgo,+titleProp,+ref![path]',
                                                 },
                                             },
-                                        },
-                                        require.resolve('babel-plugin-transform-decorators-legacy'),
+                                        }
                                     ],
+                                    [
+                                        require.resolve('babel-plugin-transform-decorators-legacy'),
+                                    ]
                                 ],
 
                                 cacheDirectory: true,
@@ -414,9 +416,10 @@ module.exports = function (webpackEnv) {
                                         : isEnvDevelopment && 'development',
                                     [
                                         'babel-plugin-named-asset-import',
+                                        'babel-plugin-transform-decorators-legacy',
                                         'babel-preset-react-app',
                                         'react-dev-utils',
-                                        'react-scripts',
+                                        'wanke-scripts',
                                     ]
                                 ),
                                 sourceMaps: shouldUseSourceMap,

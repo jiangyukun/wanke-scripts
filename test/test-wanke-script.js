@@ -1,0 +1,3 @@
+
+
+require('../scripts/start')

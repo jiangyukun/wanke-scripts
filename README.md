@@ -1,6 +1,10 @@
 # wanke-scripts
 
 基于create-react-app中的react-scripts ，去除eslint，添加less支持
+
+### 1.2.0
+wanke-tools作为 peerDependencies
+
 ### 1.1.9
 添加wanke-tools
 

@@ -373,6 +373,14 @@ module.exports = function (webpackEnv) {
                                     ]
                                 ),
                                 plugins: [
+                                    ['wanke-tools/packages/babel-plugin-clickid/index',
+                                        {
+                                            "clickElements": [
+                                                "button",
+                                                "Button"
+                                            ]
+                                        }
+                                    ],
                                     [
                                         require.resolve('babel-plugin-named-asset-import'),
                                         {
@@ -582,11 +590,7 @@ module.exports = function (webpackEnv) {
                     : undefined,
                 tsconfig: paths.appTsConfig,
                 reportFiles: [
-                    '**',
-                    '!**/__tests__/**',
-                    '!**/?(*.)(spec|test).*',
-                    '!**/src/setupProxy.*',
-                    '!**/src/setupTests.*',
+                    "!src/**"
                 ],
                 silent: true,
                 formatter: isEnvProduction ? typescriptFormatter : undefined,
